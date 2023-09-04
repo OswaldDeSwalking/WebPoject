@@ -1,0 +1,33 @@
+button {
+    font-family: Calibri, serif;
+    border: 2px #424242 solid;
+    border-radius: 12px;
+    font-size: 30px;
+}
+
+#nuberPanel {
+    width: 320px;
+    display: grid;
+    grid-template-columns: repeat(3, 30fr);
+    padding-top: 10px;
+    grid-auto-rows: 75px;
+    grid-gap: 2px;
+
+}
+
+input {
+    width: 315px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px #424242 solid;
+    font-size: 35px;
+}
+
+#Calc {
+    display: grid;
+    border: 2px #424242 solid;
+    padding: 10px;
+    border-radius: 10px;
+    width: max-content;
+    margin: auto;
+}
