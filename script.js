@@ -16,57 +16,36 @@ function Result() {
     const regex = /[/*+-]/gm;
     let simbol = inputTemp.value.match(regex);
     if (simbol.length < 2) {
-        StandartCalc(simbol, inputTemp);
+        StandartCalc(simbol,inputTemp);
     } else {
-        HardCalc(simbol, inputTemp);
+        HardCalc(simbol,inputTemp);
     }
-}
 
-function StandartCalc(sim, tepm) {
-    var ssr = sim[0].toString();
-    let splits = tepm.value.split(sim[0].toString());
-    switch (ssr) {
-        case '/':
-            document.querySelector('label').innerHTML = parseInt(splits[0]) / parseInt(splits[1]);
-            tepm.value = "";
-            break
-        case '*':
-            document.querySelector('label').innerHTML = (parseInt(splits[0]) * parseInt(splits[1]));
-            tepm.value = "";
-            break
-        case '+':
-            document.querySelector('label').innerHTML = (parseInt(splits[0]) + parseInt(splits[1]));
-            tepm.value = "";
-            break
-        case '-':
-            document.querySelector('label').innerHTML = (parseInt(splits[0]) - parseInt(splits[1]));
-            tepm.value = "";
-            break
-    }
-}
-
-function HardCalc(sim, t) {
-    const regex = /[/*+-]/gm;
-    let nud = t.value.split(regex);
-
-    for (let i = 0; i < sim.length; i++) {
-        if (sim[i] == "/") {
-            let k = nud[i];
-            let s = nud[i + 1];
-            let res = parseInt(nud[i]) * parseInt(nud[i + 1])
-            nud  = nud.filter((nuds) => nuds != k)
-            nud = nud.filter((nuds) => nuds != s);
+    function StandartCalc(sim,tepm)
+    {
+        var ssr = sim[0].toString();
+        let splits = inputTemp.value.split(sim[0].toString());
+        switch (ssr) {
+            case '/':
+                document.querySelector('label').innerHTML= parseInt(splits[0]) / parseInt(splits[1]);
+                tepm.value="";
+                break
+            case '*':
+                document.querySelector('label').innerHTML=(parseInt(splits[0]) * parseInt(splits[1]));
+                tepm.value="";
+                break
+            case '+':
+                document.querySelector('label').innerHTML=(parseInt(splits[0]) + parseInt(splits[1]));
+                tepm.value="";
+                break
+            case '-':
+                document.querySelector('label').innerHTML=(parseInt(splits[0]) - parseInt(splits[1]));
+                tepm.value="";
+                break
         }
-        if (sim[i] == "*")
+        function HardCalc(sim)
         {
-            let k = nud[i];
-            let s = nud[i + 1];
-            let res = parseInt(nud[i]) * parseInt(nud[i + 1])
-            nud  = nud.filter((nuds) => nuds != k)
-            nud = nud.filter((nuds) => nuds != s);
-            console.log();
+
         }
     }
-
-    console.log();
 }

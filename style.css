@@ -3,7 +3,7 @@ button {
     border: 2px #424242 solid;
     border-radius: 12px;
     font-size: 30px;
-    padding: 1.5rem 2rem;
+    padding: unset;
     transition: all .3s;
     cursor: pointer;
     content: contents;
