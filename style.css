@@ -25,15 +25,15 @@ button {
     grid-template-columns: repeat(3, 30fr);
     padding-top: 10px;
     grid-gap: 2px;
-
 }
 
-input {
+input
+{
     width: 315px;
     height: 50px;
-    border-radius: 10px;
-    border: 2px #424242 solid;
     font-size: 35px;
+    border: hidden;
+    font-family: Calibri, serif;
 }
 
 #Calc {
@@ -45,4 +45,17 @@ input {
     margin: auto;
     box-shadow: 0px 5px 10px;
     height: max-content;
+}
+#ViewerPanel
+{
+    display: grid;
+    padding: 5px
+;
+}
+label
+{
+    font-size: 35px;
+    padding: 2px;
+    text-align: right;
+    font-family: Calibri, serif;
 }
